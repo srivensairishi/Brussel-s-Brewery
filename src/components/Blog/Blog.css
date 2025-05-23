@@ -1,0 +1,81 @@
+.bg-2{
+    background-color: #1F1B1D;
+    height: 100vh;
+    width: 100vw;
+}
+.image-2{
+    height: 200px;
+    width: 300px;
+    border-radius: 10px;
+    margin-left: 150px;
+    margin-top: 50px;
+    transition: all 0.2s linear 0s;
+}
+.image-2:hover{
+    height: 200px;
+    width: 300px;
+    border-radius: 10px;
+    margin-left: 150px;
+    margin-top: 50px;
+    transform: scale(1.05);
+    cursor: pointer;
+}
+.image-21{
+    height: 200px;
+    width: 300px;
+    border-radius: 10px;
+    margin-left: 0px;
+    margin-top: 50px;
+    transition: all 0.2s linear 0s;
+}
+.image-21:hover{
+    height: 200px;
+    width: 300px;
+    border-radius: 10px;
+    margin-left: 0px;
+    margin-top: 50px;
+    transform: scale(1.05);
+    cursor: pointer;
+}
+.s-heading{
+    color: #E7D1B0;
+    font-family: "Cormorant Garamond";
+    margin-top: 50px;
+    transition: all 0.2s linear 0s;
+}
+.s-heading:hover{
+    color: white;
+    font-family: "Cormorant Garamond";
+     margin-top: 50px;
+}
+.s-para{
+    color: #E7D1B0;
+    font-family: "Times New Roman";
+    transition: all 0.2s linear 0s;
+}
+.s-para:hover{
+    color: white;
+    font-family: "Times New Roman";
+}
+.s-button{
+    background-color: #1F1B1D;
+    border-color: #E7D1B0;
+    color: #E7D1B0;
+    height: 50px;
+    width: 150px;
+    border-radius: 10px;
+    transition: all 0.2s linear 0s;
+}
+.s-button:hover{
+    background-color: #1F1B1D;
+    border-color: #E7D1B0;
+    color: #E7D1B0;
+    height: 50px;
+    width: 150px;
+    border-radius: 10px;
+    transform: scale(1.05)
+}
+.alignment{
+    display: flex;
+    justify-content: space-around;
+}

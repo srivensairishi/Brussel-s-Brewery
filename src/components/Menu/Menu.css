@@ -1,0 +1,95 @@
+.bg-4{
+    background-color: #EFDECD;
+    height: 130vh;
+    width: 100vw;
+}
+.fo-title{
+    text-align: center;
+    padding-top: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+.fo-card{
+    border:  2px solid brown;
+    height: 270px;
+    width: 400px;
+    border-radius: 10px;
+    display: flex;
+}
+.fo-image{
+    height: 150px;
+    width: 150px;
+    border-radius: 150px;
+    padding: 20px;
+}
+.fo-heading{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.fo-para{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: darkgoldenrod;
+}
+.fo-align{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+.fo-price{
+    font-weight: bold;
+    font-size: 20px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.fo-button{
+    color: white;
+    height: 50px;
+    width: 100px;
+    background-color: green;
+    border: none;
+    font-weight: bold;
+    border-radius: 150px;
+    transition: all 0.1s linear 0s;
+}
+.fo-button:hover{
+    color: white;
+    height: 50px;
+    width: 100px;
+    background-color: #45a30f;
+    border: none;
+    font-weight: bold;
+    border-radius: 150px;
+}
+.fo-button2{
+    color: white;
+    height: 50px;
+    width: 100px;
+    background-color: darkred;
+    border: none;
+    font-weight: bold;
+    border-radius: 150px;
+    margin-left: 20px;
+    transition: all 0.1s linear 0s;
+}
+.fo-button2:hover{
+    color: white;
+    height: 50px;
+    width: 100px;
+    background-color: red;
+    border: none;
+    font-weight: bold;
+    border-radius: 150px;
+}
+.fo-cart-button{
+    height: 50px;
+    width: 200px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border: none;
+    color: #F4E0C9  ;
+    margin-top: 40px;
+    margin-left: 100px;
+    background-color: #4A342E;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 23px;
+}

@@ -1,0 +1,32 @@
+.bg-5{
+    background-color: #945f22;
+    height: 100vh;
+    width: 100vw;
+}
+.fi-title{
+    color: #EFDECD;
+    text-align: center;
+    padding-top: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    margin-bottom: 30px;
+    
+}
+.fi-image{
+    height: 400px;
+    width: 300px;
+    border-radius: 50px;
+    box-shadow: 4px 4px 10px #EFDECD;
+    
+}
+.fi-alignment{
+    display: flex;
+    justify-content: space-evenly;
+}
+.fi-para{
+    color: #EFDECD;
+    font-size: 25px;
+    font-weight :600;
+    width: 500px;
+    font-family: 'Courier New', Courier, monospace;
+}

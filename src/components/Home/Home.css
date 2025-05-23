@@ -1,0 +1,98 @@
+.bg{
+    background-color: #F4E0C9;
+    height: 100vh;
+    width: 100vw;
+}
+.bb{
+    display: flex;
+}
+.bb2{
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-button{
+    height: 50px;
+    width: 100px;
+    border: none;
+    color: #4A342E;
+    margin-right: 5px;
+    margin-top: 10px;
+    font-weight: bold;
+    background-color: #F4E0C9;
+    border-radius: 10px;
+    transition: all 0.5s linear 0s;
+}
+.nav-button:hover{
+    height: 50px;
+    width: 100px;
+    border: none;
+    color: #F4E0C9;
+    margin-right: 5px;
+    margin-top: 10px;
+    font-weight: bold;
+    background-color: #4A342E;
+    border-radius: 10px;
+}
+.f-heading{
+    margin-left: 150px;
+    margin-top: 150px;
+    font-size: 55px;
+    color: #2C1C16;
+    font-family: "Cormorant Garamond";
+}
+.f-para{
+    margin-left: 150px;
+    color: #2C1C16;
+    font-family: "Playfair Display";
+}
+.f-button1{
+    height: 50px;
+    width: 150px;
+    border: 2px solid #4A342E;
+    color: #F4E0C9  ;
+    margin-top: 10px;
+    margin-left: 150px;
+    background-color: #4A342E;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: all 0.2s linear 0s;
+}
+.f-button1:hover{
+    height: 50px;
+    width: 150px;
+    border-color: #4A342E;
+    font-weight: bold;
+    color: #4A342E;
+    margin-left: 150px;
+    margin-top: 10px;
+    background-color:  #F4E0C9;
+    border-radius: 10px;
+}
+.f-button2{
+    height: 50px;
+    width: 150px;
+    border-color: 2px solid #4A342E;
+    color: #4A342E;
+    margin-left: 20px;
+    margin-top: 10px;
+    font-weight: bold;
+    background-color:  #F4E0C9;
+    border-radius: 10px;
+    transition: all 0.2s linear 0s;
+}
+.f-button2:hover{
+    height: 50px;
+    width: 150px;
+    border-color: #4A342E;
+    color: #F4E0C9;
+    margin-left: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+    background-color:  #4A342E;
+    border-radius: 10px;
+}
+.image{
+    height: 600px;
+    width: 600px;
+}
