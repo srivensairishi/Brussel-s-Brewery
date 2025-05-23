@@ -1,39 +1,33 @@
 .bg-2{
     background-color: #1F1B1D;
-    height: 100vh;
+    min-height: 100vh;
     width: 100vw;
+    box-sizing: border-box;
+    overflow-x: hidden;
 }
 .image-2{
-    height: 200px;
-    width: 300px;
+    height: auto;
+    width: 90vw;
+    max-width: 300px;
     border-radius: 10px;
-    margin-left: 150px;
-    margin-top: 50px;
+    margin: 20px auto;
+    display: block;
     transition: all 0.2s linear 0s;
 }
 .image-2:hover{
-    height: 200px;
-    width: 300px;
-    border-radius: 10px;
-    margin-left: 150px;
-    margin-top: 50px;
     transform: scale(1.05);
     cursor: pointer;
 }
 .image-21{
-    height: 200px;
-    width: 300px;
+    height: auto;
+    width: 90vw;
+    max-width: 300px;
     border-radius: 10px;
-    margin-left: 0px;
-    margin-top: 50px;
+    margin: 20px auto;
+    display: block;
     transition: all 0.2s linear 0s;
 }
 .image-21:hover{
-    height: 200px;
-    width: 300px;
-    border-radius: 10px;
-    margin-left: 0px;
-    margin-top: 50px;
     transform: scale(1.05);
     cursor: pointer;
 }
@@ -41,6 +35,7 @@
     color: #E7D1B0;
     font-family: "Cormorant Garamond";
     margin-top: 50px;
+    text-align: center;
     transition: all 0.2s linear 0s;
 }
 .s-heading:hover{
@@ -51,6 +46,7 @@
 .s-para{
     color: #E7D1B0;
     font-family: "Times New Roman";
+    text-align: center;
     transition: all 0.2s linear 0s;
 }
 .s-para:hover{
@@ -62,8 +58,11 @@
     border-color: #E7D1B0;
     color: #E7D1B0;
     height: 50px;
-    width: 150px;
+    width: 80%;
+    max-width: 200px;
     border-radius: 10px;
+    display: block;
+    margin: 20px auto 0 auto;
     transition: all 0.2s linear 0s;
 }
 .s-button:hover{
@@ -71,11 +70,36 @@
     border-color: #E7D1B0;
     color: #E7D1B0;
     height: 50px;
-    width: 150px;
+    width: 80%;
+    max-width: 200px;
     border-radius: 10px;
     transform: scale(1.05)
 }
 .alignment{
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+@media (min-width: 768px) {
+    .alignment {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .image-2, .image-21 {
+        max-width: 300px;
+        margin: 50px 0 0 150px;
+        display: inline-block;
+    }
+    .s-heading, .s-para {
+        text-align: left;
+    }
+    .s-button {
+        margin-left: 0;
+        width: 150px;
+    }
 }

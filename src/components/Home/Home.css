@@ -1,13 +1,20 @@
 .bg{
     background-color: #F4E0C9;
-    height: 100vh;
+    min-height: 100vh;
     width: 100vw;
+    box-sizing: border-box;
+    overflow-x: hidden;
 }
 .bb{
     display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
 }
 .bb2{
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
 }
 
@@ -20,8 +27,8 @@
     margin-top: 10px;
     font-weight: bold;
     background-color: #F4E0C9;
-    border-radius: 10px;
-    transition: all 0.5s linear 0s;
+    border-radius: 5px;
+    transition: background-color 0.2s linear, color 0.2s linear, border-color 0.2s linear, box-shadow 0.2s linear;
 }
 .nav-button:hover{
     height: 50px;
@@ -32,67 +39,144 @@
     margin-top: 10px;
     font-weight: bold;
     background-color: #4A342E;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 .f-heading{
-    margin-left: 150px;
-    margin-top: 150px;
-    font-size: 55px;
+    margin-left: 0;
+    margin-top: 40px;
+    font-size: 2.2rem;
     color: #2C1C16;
     font-family: "Cormorant Garamond";
+    text-align: center;
 }
 .f-para{
-    margin-left: 150px;
+    margin-left: 0;
     color: #2C1C16;
     font-family: "Playfair Display";
+    text-align: center;
 }
 .f-button1{
     height: 50px;
     width: 150px;
     border: 2px solid #4A342E;
     color: #F4E0C9  ;
-    margin-top: 10px;
-    margin-left: 150px;
+    margin: 20px auto 0 auto;
     background-color: #4A342E;
     font-weight: bold;
-    border-radius: 10px;
+    border-radius: 5px;
     transition: all 0.2s linear 0s;
 }
 .f-button1:hover{
-    height: 50px;
-    width: 150px;
-    border-color: #4A342E;
-    font-weight: bold;
+    background-color: #F4E0C9;
     color: #4A342E;
-    margin-left: 150px;
-    margin-top: 10px;
-    background-color:  #F4E0C9;
-    border-radius: 10px;
+    border: 2px solid #4A342E;
+    border-radius: 5px;
 }
 .f-button2{
     height: 50px;
     width: 150px;
     border-color: 2px solid #4A342E;
     color: #4A342E;
-    margin-left: 20px;
-    margin-top: 10px;
+    margin: 20px auto 0 auto;
     font-weight: bold;
     background-color:  #F4E0C9;
-    border-radius: 10px;
+    border-radius: 5px;
     transition: all 0.2s linear 0s;
 }
 .f-button2:hover{
-    height: 50px;
-    width: 150px;
-    border-color: #4A342E;
+    background-color: #4A342E;
     color: #F4E0C9;
-    margin-left: 20px;
-    font-weight: bold;
-    margin-top: 10px;
-    background-color:  #4A342E;
-    border-radius: 10px;
+    border: 2px solid #4A342E;
+    border-radius: 5px;
 }
 .image{
-    height: 600px;
-    width: 600px;
+    height: 400px;
+    width: 400px;
+    max-width: 400px;
+    display: block;
+    margin: 30px auto;
+}
+
+/* Responsive styles */
+@media (min-width: 768px) {
+    .bb {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .f-heading, .f-para {
+        text-align: left;
+        margin-left: 150px;
+    }
+    .f-button1, .f-button2 {
+        margin-left: 150px;
+        margin-right: 0;
+        width: 150px;
+    }
+    .image {
+        max-width: 600px;
+        margin: 0;
+        display: block;
+    }
+}
+
+/* Mobile styles and button animation fixes */
+@media (max-width: 767px) {
+    .bb {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .f-heading, .f-para {
+        text-align: center;
+        margin-left: 0;
+    }
+    .f-button1, .f-button2 {
+        margin: 20px auto 0 auto;
+        width: 80vw;
+        max-width: 200px;
+        display: block;
+        text-align: center;
+    }
+    .nav-button {
+        width: 80vw;
+        max-width: 120px;
+        margin: 10px auto 0 auto;
+    }
+    .image {
+        display: none !important;
+    }
+    .f-button1, .f-button1:focus, .f-button1:active {
+        outline: none !important;
+        box-shadow: none !important;
+    }
+}
+
+/* Button animation fixes */
+.f-button1, .f-button2, .nav-button {
+    transition: background-color 0.2s linear, color 0.2s linear, border-color 0.2s linear, box-shadow 0.2s linear;
+}
+.f-button1:hover {
+    background-color: #F4E0C9;
+    color: #4A342E;
+    border: 2px solid #4A342E;
+    border-radius: 5px;
+}
+.f-button2:hover {
+    background-color: #4A342E;
+    color: #F4E0C9;
+    border: 2px solid #4A342E;
+    border-radius: 5px;
+}
+.nav-button:hover {
+    background-color: #4A342E;
+    color: #F4E0C9;
+    border-radius: 5px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }

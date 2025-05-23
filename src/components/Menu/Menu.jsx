@@ -8,7 +8,7 @@ function Menu(){
         setCount(prevCount => prevCount+1)
     }
     function decrement(){
-        setCount(prevCount => prevCount-1)
+        setCount(prevCount => (prevCount > 0 ? prevCount - 1 : 0))
     }
     
     return(

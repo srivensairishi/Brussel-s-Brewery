@@ -1,7 +1,9 @@
 .bg-5{
     background-color: #945f22;
-    height: 100vh;
+    min-height: 100vh;
     width: 100vw;
+    box-sizing: border-box;
+    overflow-x: hidden;
 }
 .fi-title{
     color: #EFDECD;
@@ -13,20 +15,43 @@
     
 }
 .fi-image{
-    height: 400px;
-    width: 300px;
+    height: auto;
+    width: 80vw;
+    max-width: 300px;
     border-radius: 50px;
     box-shadow: 4px 4px 10px #EFDECD;
-    
+    margin: 0 auto;
+    display: block;
 }
 .fi-alignment{
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
 }
 .fi-para{
     color: #EFDECD;
-    font-size: 25px;
+    font-size: 1.1rem;
     font-weight :600;
-    width: 500px;
+    width: 90vw;
+    max-width: 500px;
     font-family: 'Courier New', Courier, monospace;
+    margin: 0 auto;
+    text-align: center;
+}
+@media (min-width: 768px) {
+    .fi-alignment {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-evenly;
+        gap: 24px;
+    }
+    .fi-image {
+        max-width: 300px;
+    }
+    .fi-para {
+        max-width: 500px;
+        text-align: left;
+    }
 }

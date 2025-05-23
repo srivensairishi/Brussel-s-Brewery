@@ -1,7 +1,9 @@
 .bg-4{
     background-color: #EFDECD;
-    height: 130vh;
+    min-height: 100vh;
     width: 100vw;
+    box-sizing: border-box;
+    overflow-x: hidden;
 }
 .fo-title{
     text-align: center;
@@ -11,14 +13,20 @@
 }
 .fo-card{
     border:  2px solid brown;
-    height: 270px;
-    width: 400px;
+    min-height: 220px;
+    width: 90vw;
+    max-width: 370px;
     border-radius: 10px;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    box-sizing: border-box;
 }
 .fo-image{
-    height: 150px;
-    width: 150px;
+    height: auto;
+    width: 60vw;
+    max-width: 150px;
     border-radius: 150px;
     padding: 20px;
 }
@@ -29,9 +37,13 @@
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: darkgoldenrod;
 }
-.fo-align{
+.fo-align {
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
     margin-top: 30px;
 }
 .fo-price{
@@ -42,54 +54,164 @@
 .fo-button{
     color: white;
     height: 50px;
-    width: 100px;
+    width: 90px;
     background-color: green;
+    font-size: 13px;
     border: none;
     font-weight: bold;
-    border-radius: 150px;
+    border-radius: 10px;
     transition: all 0.1s linear 0s;
 }
 .fo-button:hover{
     color: white;
     height: 50px;
-    width: 100px;
+    width: 90px;
     background-color: #45a30f;
+    font-size: 13px;
     border: none;
     font-weight: bold;
-    border-radius: 150px;
+    border-radius: 10px;
 }
 .fo-button2{
     color: white;
     height: 50px;
-    width: 100px;
+    width: 90px;
     background-color: darkred;
     border: none;
+    font-size: 13px;
     font-weight: bold;
-    border-radius: 150px;
+    border-radius: 10px;
     margin-left: 20px;
     transition: all 0.1s linear 0s;
 }
 .fo-button2:hover{
     color: white;
     height: 50px;
-    width: 100px;
+    width: 90px;
+    font-size: 13px;
     background-color: red;
     border: none;
     font-weight: bold;
-    border-radius: 150px;
+    border-radius: 10px;
 }
 .fo-cart-button{
     height: 50px;
-    width: 200px;
+    width: 90vw;
+    max-width: 200px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     border: none;
     color: #F4E0C9  ;
-    margin-top: 40px;
-    margin-left: 100px;
+    margin: 24px auto 0 auto;
+    display: block;
     background-color: #4A342E;
     border-radius: 10px;
-    display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 23px;
+    font-size: 1.1rem;
+}
+@media (min-width: 768px) {
+    .fo-align {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 24px;
+        margin-top: 30px;
+    }
+    .fo-card {
+        flex-direction: row;
+        align-items: center;
+        width: 400px;
+        min-height: 270px;
+    }
+    .fo-image {
+        max-width: 150px;
+    }
+    .fo-cart-button {
+        margin-left: 100px;
+        width: 200px;
+    }
+}
+@media (max-width: 767px) {
+    .fo-title {
+        text-align: center;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .fo-align {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 24px;
+        margin-top: 30px;
+    }
+    .fo-card {
+        flex-direction: column;
+        align-items: center;
+        width: 90vw;
+        max-width: 400px;
+        min-height: 220px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .fo-heading, .fo-para, .fo-price {
+        text-align: center;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .fo-button, .fo-button2, .fo-cart-button {
+        display: block;
+        margin: 20px auto 0 auto;
+        width: 60vw;
+        max-width: 120px;
+        height: 40px;
+        font-size: 0.95rem;
+        text-align: center;
+        border-radius: 10px;
+        transition: none !important;
+        animation: none !important;
+    }
+    .fo-button:hover, .fo-button2:hover, .fo-cart-button:hover {
+        transition: none !important;
+        animation: none !important;
+    }
+    .fo-button:active, .fo-button2:active, .fo-cart-button:active {
+        background-color: green !important;
+        color: white !important;
+        height: 40px !important;
+        width: 60vw !important;
+        max-width: 120px !important;
+        min-width: 0 !important;
+        min-height: 0 !important;
+        transform: none !important;
+        outline: none !important;
+        box-shadow: none !important;
+    }
+    .fo-button2:active {
+        background-color: darkred !important;
+    }
+    .fo-cart-button:active {
+        background-color: #4A342E !important;
+    }
+    .fo-button {
+        background-color: green !important;
+    }
+    .fo-button2 {
+        background-color: darkred !important;
+    }
+    .fo-cart-button {
+        background-color: #4A342E !important;
+    }
+    .fo-image {
+        display: block;
+        margin: 0 auto 20px auto;
+        width: 60vw;
+        max-width: 150px;
+    }
+    .fo-button2 {
+        margin-bottom: 16px;
+    }
+    .fo-cart-button {
+        margin-bottom: 20px;
+    }
 }

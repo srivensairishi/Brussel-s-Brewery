@@ -1,8 +1,13 @@
 import './Header.css'
-import {Link} from 'react-router'
+import { useState } from 'react'
+import { Link } from 'react-router'
 
 
 function Header() {
+    const [menuOpen, setMenuOpen] = useState(false)
+    const handleToggle = () => setMenuOpen(m => !m)
+    // Close menu after click (for mobile)
+    const handleNavClick = () => setMenuOpen(false)
     return(
         <>
             <div className='background'>
@@ -15,16 +20,19 @@ function Header() {
                         <path d="M32 12C32 12 32 16 36 18C40 20 40 24 40 24" stroke="#4A342E" stroke-width="2" stroke-linecap="round"/></svg>
                     </div>
                     <p className='bbtext'>BRUSSELS BREWERY</p>
+                    <button className='hamburger' aria-label='Toggle navigation' onClick={handleToggle}>
+                        <span className={menuOpen ? 'bar open' : 'bar'}></span>
+                        <span className={menuOpen ? 'bar open' : 'bar'}></span>
+                        <span className={menuOpen ? 'bar open' : 'bar'}></span>
+                    </button>
                 </div> 
-
-                <div>
-                    <Link to="/"><button className='nav-button'>Home</button></Link>
-                    <Link to="/blog"><button className='nav-button'>Blog</button></Link>
-                    <Link to="/about-us"><button className='nav-button'>About Us</button></Link>
-                    <Link to="/menu"><button className='nav-button'>Menu</button></Link>
-                    <Link to="/testimonials"><button className='nav-button'>Testimonials</button></Link>
-                </div>
-                
+                <nav className={menuOpen ? 'nav-menu open' : 'nav-menu'}>
+                    <Link to="/" onClick={handleNavClick}><button className='nav-button'>Home</button></Link>
+                    <Link to="/blog" onClick={handleNavClick}><button className='nav-button'>Blog</button></Link>
+                    <Link to="/about-us" onClick={handleNavClick}><button className='nav-button'>About Us</button></Link>
+                    <Link to="/menu" onClick={handleNavClick}><button className='nav-button'>Menu</button></Link>
+                    <Link to="/testimonials" onClick={handleNavClick}><button className='nav-button'>Testimonials</button></Link>
+                </nav>
                 </div>  
             </div>    
 
